@@ -1,0 +1,14 @@
+{
+  "name": "casino",
+  "version": "1.0.0",
+  "description": "Casino \r - a player can bet on the triplets , and if he get the triplet he will win the bet !!!",
+  "main": "casino.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
