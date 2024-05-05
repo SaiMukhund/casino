@@ -12,8 +12,34 @@
 // }
 const prompt = require("prompt-sync")() ;
 const deposit= () => {
-    const depositAmount=prompt("enter the deposit amount: ")
-    
+    while (true) {
+        const depositAmount=prompt("enter the deposit amount: ");
+        const numberDespositAmount =parseFloat(depositAmount);
+
+        if (isNaN(numberDespositAmount) || numberDespositAmount<=0){
+            console.log("please eneter a valid number , try again ");
+        }
+        else{
+            return numberDespositAmount;
+        }
+    }
+
 }
 
-deposit();
+
+const getNumberOfLines= () =>{
+    while (true) {
+        const numberOfLines=parseFloat(prompt("enter the number of lines to bett on (1-3)"));
+
+        if (isNaN(numberOfLines) || numberOfLines<=0  || numberOfLines >3){
+            console.log("please eneter a valid number of lines , try again ");
+        }
+        else{
+            return numberOfLines;
+        }
+    }
+}
+
+const despositAmount=deposit();
+const numberOfLines=getNumberOfLines()
+console.log(despositAmount,numberOfLines)
