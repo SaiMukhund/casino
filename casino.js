@@ -40,6 +40,19 @@ const getNumberOfLines= () =>{
     }
 }
 
-const despositAmount=deposit();
-const numberOfLines=getNumberOfLines()
-console.log(despositAmount,numberOfLines)
+const getBet = (balance,lines) =>{
+    while (true) {
+        const bet=parseFloat(prompt("enter the amount of bet  per line: "));
+
+        if (isNaN(bet) || bet<=0  || bet > balance/lines){
+            console.log("please enter a vaid bet  , try again ");
+        }
+        else{
+            return bet;
+        }
+    }
+}
+
+let balance=deposit();
+const numberOfLines=getNumberOfLines();
+const bet=getBet(balance,numberOfLines)
